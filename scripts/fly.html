@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>SCRIPT FLY</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body { font-family:'Poppins',sans-serif; background:#0b1628; color:#fff; display:flex; justify-content:center; align-items:center; height:100vh; margin:0; }
+    .container { max-width:600px; width:90%; background:rgba(255,255,255,0.05); padding:20px; border-radius:15px; box-shadow:0 8px 40px rgba(0,0,0,0.4); }
+    textarea { width:100%; height:150px; background:#1f2a48; color:#fff; border:none; padding:10px; border-radius:10px; font-family:monospace; font-size:14px; resize:none; }
+    button { margin-top:10px; padding:10px 20px; border:none; border-radius:10px; background:#00aaff; color:#fff; font-weight:600; cursor:pointer; transition:0.3s; }
+    button:hover { background:#00d4ff; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>SCRIPT FLY</h2>
+    <textarea id="scriptText" readonly>loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Fly-gui-v3-33608"))()</textarea>
+    <button onclick="copyScript()">Copy Script</button>
+  </div>
+
+  <script>
+    function copyScript(){
+      const textarea = document.getElementById('scriptText');
+      textarea.select();
+      navigator.clipboard.writeText(textarea.value).then(() => {
+        alert('Script FLY berhasil disalin ✅');
+      });
+    }
+  </script>
+</body>
+</html>
