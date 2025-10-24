@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>XEE — Linktree</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0;}
+body, html{height:100%; font-family:'Poppins',sans-serif; display:flex; justify-content:center; align-items:center; background:#0b1628; color:#fff;}
+body {background: linear-gradient(-45deg, #0b1628, #1f2a48, #0b1628, #16273f); background-size: 400% 400%; animation: gradientBG 15s ease infinite;}
+@keyframes gradientBG {0%{background-position:0% 50%;}50%{background-position:100% 50%;}100%{background-position:0% 50%;}}
+
+.container{
+  text-align:center;
+  padding:30px;
+  border-radius:30px;
+  backdrop-filter: blur(10px);
+  background: rgba(255,255,255,0.05);
+  box-shadow: 0 8px 40px rgba(0,0,0,0.4);
+  max-width: 400px;
+  width: 90%;
+}
+
+.avatar{
+  width:100px;
+  height:100px;
+  border-radius:50%;
+  margin:0 auto 15px;
+  border:3px solid rgba(255,255,255,0.3);
+  background-image: url('https://i.postimg.cc/Wb887GXk/IMG-2733.jpg');
+  background-size: cover;
+  background-position: center;
+  animation: pulse 2s infinite;
+}
+@keyframes pulse {
+  0%{box-shadow: 0 0 10px #00ffff,0 0 20px #ff00ff;}
+  50%{box-shadow: 0 0 20px #ff00ff,0 0 30px #00ffff;}
+  100%{box-shadow: 0 0 10px #00ffff,0 0 20px #ff00ff;}
+}
+
+h1{
+  font-size:24px;
+  margin-bottom:6px;
+  background: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet);
+  background-size: 400% 400%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: rainbow 5s linear infinite;
+  text-shadow: 0 0 5px #fff,0 0 10px #ff00ff,0 0 15px #00ffff;
+  display: inline-block;
+}
+.check{color:#1da1f2; font-size:18px; margin-left:5px;}
+
+@keyframes rainbow {0%{background-position:0% 50%;}50%{background-position:100% 50%;}100%{background-position:0% 50%;}}
+
+p.desc{ font-size:14px; color: #cbd6e4; margin-bottom:20px; }
+
+.btn{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  width:100%;
+  padding:12px 20px;
+  margin:10px 0;
+  border-radius:15px;
+  font-weight:600;
+  text-decoration:none;
+  color:#fff;
+  background: linear-gradient(45deg, #ff0000, #ff7f00, #ffff00, #00ff00, #0000ff, #8b00ff, #ff0000);
+  background-size: 400% 400%;
+  border:1px solid rgba(255,255,255,0.2);
+  transition: all 0.3s ease;
+  box-shadow: 0 0 5px #00ffff,0 0 10px #ff00ff;
+  animation: btnGlow 5s linear infinite;
+}
+@keyframes btnGlow {0%{background-position:0% 50%;}50%{background-position:100% 50%;}100%{background-position:0% 50%;}}
+
+.btn .left{ display:flex; align-items:center; gap:10px; }
+.btn .emoji{ font-size:18px; }
+.btn .badge{
+  font-size:11px;
+  font-weight:700;
+  padding:2px 6px;
+  background:#00aaff;
+  color:#fff;
+  border-radius:8px;
+  text-transform:uppercase;
+  white-space:nowrap;
+}
+.btn:hover{
+  transform: scale(1.05) translateY(-2px);
+  box-shadow: 0 0 15px #00ffff,0 0 25px #ff00ff,0 0 35px #ffff00;
+  border-color:#00aaff;
+}
+
+.btn.muted{
+  border:1px solid rgba(255,255,255,0.1);
+  background: rgba(255,255,255,0.03);
+  color:#a0b0c0;
+}
+.btn.muted:hover{
+  color:#fff;
+  border-color:#00aaff;
+  box-shadow: 0 6px 20px rgba(0,170,255,0.4);
+}
+
+/* Copy button style */
+.copyBtn{
+  margin-left:8px;
+  background:#00aaff;
+  border-radius:8px;
+  padding:3px 6px;
+  font-size:12px;
+  cursor:pointer;
+  user-select:none;
+  transition: 0.2s;
+}
+.copyBtn:hover{background:#0088cc;}
+
+/* Toast notification */
+.toast{
+  position:fixed;
+  bottom:20px;
+  left:50%;
+  transform:translateX(-50%) translateY(0);
+  background:#00aaff;
+  padding:10px 20px;
+  border-radius:20px;
+  opacity:0;
+  pointer-events:none;
+  color:#fff;
+  font-weight:600;
+  transition:0.3s, transform 0.3s;
+  z-index:9999;
+}
+
+footer{margin-top:20px; font-size:12px; color:#98a9bd;}
+@media(max-width:400px){ .container{padding:20px;} }
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="avatar"></div>
+  <h1>XEE <span class="check">✔️</span></h1>
+  <p class="desc">Pilih salah satu link di bawah ini:</p>
+
+  <a class="btn" href="https://wa.me/6282137840556?text=Halo%20aku%20dari%20website%20kamu" target="_blank">
+    <div class="left"><span class="emoji">💬</span> Chat WhatsApp</div>
+    <span class="badge">Official</span>
+  </a>
+
+  <a class="btn" href="https://deltaios-executor.com" target="_blank">
+    <div class="left"><span class="emoji">🍎</span> Download Delta iOS</div>
+    <span class="badge">Official</span>
+  </a>
+
+  <a class="btn" href="https://delta-executor.com/download/#goog_rewarded" target="_blank">
+    <div class="left"><span class="emoji">🤖</span> Download Delta Android</div>
+    <span class="badge">Official</span>
+  </a>
+
+  <a class="btn" href="https://krnl-ios.com" target="_blank">
+    <div class="left"><span class="emoji">🍎</span> KRNL iOS</div>
+    <span class="badge">Official</span>
+  </a>
+
+  <a class="btn" href="https://workink.net/23TX/njjwh4lo" target="_blank">
+    <div class="left"><span class="emoji">🤖</span> KRNL Android</div>
+    <span class="badge">Official</span>
+  </a>
+
+  <!-- Script Buttons -->
+  <div class="btn muted" style="justify-content:space-between; cursor:default;">
+    <div class="left">SCRIPT SPEEDXHUB [GAG]</div>
+    <div>
+      <span class="copyBtn" onclick="copyText('loadstring(game:HttpGet(&quot;https://raw.githubusercontent.com/AhmadV99/Speed-Hub-X/main/Speed%20Hub%20X.lua&quot;, true))()')">Copy</span>
+      <span class="badge">Official</span>
+    </div>
+  </div>
+
+  <div class="btn muted" style="justify-content:space-between; cursor:default;">
+    <div class="left">SCRIPT FLY</div>
+    <div>
+      <span class="copyBtn" onclick="copyText('loadstring(game:HttpGet(&quot;https://rawscripts.net/raw/Universal-Script-Fly-gui-v3-33608&quot;))()')">Copy</span>
+      <span class="badge">Official</span>
+    </div>
+  </div>
+
+  <div class="btn muted" style="justify-content:space-between; cursor:default;">
+    <div class="left">SCRIPT VOIDWARE [99NIGHT]</div>
+    <div>
+      <span class="copyBtn" onclick="copyText('loadstring(game:HttpGet(&quot;https://raw.githubusercontent.com/VapeVoidware/VWExtra/main/NightsInTheForest.lua&quot;))()')">Copy</span>
+      <span class="badge">Official</span>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast">Teks berhasil disalin!</div>
+
+<script>
+function copyText(text){
+  navigator.clipboard.writeText(text).then(()=>{
+    const toast = document.getElementById('toast');
+    toast.style.opacity = '1';
+    toast.style.transform = 'translateX(-50%) translateY(-20px)';
+    setTimeout(()=>{
+      toast.style.opacity = '0';
+      toast.style.transform = 'translateX(-50%) translateY(0)';
+    },1500);
+  });
+}
+</script>
+</body>
+</html>
