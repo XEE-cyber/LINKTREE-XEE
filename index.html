@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>XEE — Linktree</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0;}
+body, html{height:100%; font-family:'Poppins',sans-serif; display:flex; justify-content:center; align-items:center; background:#0b1628; color:#fff; overflow-y:auto;}
+body {background: linear-gradient(-45deg, #0b1628, #1f2a48, #0b1628, #16273f); background-size: 400% 400%; animation: gradientBG 15s ease infinite;}
+@keyframes gradientBG {0%{background-position:0% 50%;}50%{background-position:100% 50%;}100%{background-position:0% 50%;}}
+
+.container{ text-align:center; padding:30px; border-radius:25px; backdrop-filter: blur(10px); background: rgba(255,255,255,0.05); box-shadow: 0 8px 40px rgba(0,0,0,0.4); max-width: 380px; width: 90%;}
+
+.avatar{width:100px;height:100px;border-radius:50%;margin:0 auto 15px;border:3px solid rgba(255,255,255,0.3);background-image: url('https://i.postimg.cc/Wb887GXk/IMG-2733.jpg'); background-size: cover; background-position: center; animation: pulse 2s infinite;}
+@keyframes pulse {0%{box-shadow:0 0 10px #00ffff,0 0 20px #ff00ff;}50%{box-shadow:0 0 20px #ff00ff,0 0 30px #00ffff;}100%{box-shadow:0 0 10px #00ffff,0 0 20px #ff00ff;}}
+
+h1{ font-size:22px; margin-bottom:6px; background: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet); background-size: 400% 400%; -webkit-background-clip: text; -webkit-text-fill-color: transparent; animation: rainbow 5s linear infinite; text-shadow:0 0 5px #fff,0 0 10px #ff00ff,0 0 15px #00ffff; display:flex; justify-content:center; align-items:center; gap:5px;}
+h1 span.check{color:#00aaff; font-size:18px; font-weight:bold;} 
+@keyframes rainbow {0%{background-position:0% 50%;}50%{background-position:100% 50%;}100%{background-position:0% 50%;}}
+
+p.desc{ font-size:14px; color: #cbd6e4; margin-bottom:20px;}
+
+/* Buttons */
+.btn{display:flex;align-items:center;justify-content:space-between;width:100%;padding:12px 20px;margin:10px 0;border-radius:15px;font-weight:600;text-decoration:none;color:#fff;background: linear-gradient(45deg, #ff0000, #ff7f00, #ffff00, #00ff00, #0000ff, #8b00ff, #ff0000); background-size:400% 400%;border:1px solid rgba(255,255,255,0.2);transition: all 0.3s ease; box-shadow:0 0 5px #00ffff,0 0 10px #ff00ff; animation: btnGlow 5s linear infinite;}
+@keyframes btnGlow{0%{background-position:0% 50%;}50%{background-position:100% 50%;}100%{background-position:0% 50%;}}
+.btn .left{display:flex;align-items:center;gap:10px;}
+.btn .emoji{font-size:18px;}
+.btn .badge{font-size:11px;font-weight:700;padding:2px 6px;background:#00aaff;color:#fff;border-radius:8px;text-transform:uppercase;white-space:nowrap;}
+.btn:hover{transform: scale(1.05) translateY(-2px); box-shadow:0 0 15px #00ffff,0 0 25px #ff00ff,0 0 35px #ffff00;border-color:#00aaff;}
+
+.btn.muted{border:1px solid rgba(255,255,255,0.1);background: rgba(255,255,255,0.03); color:#a0b0c0;}
+.btn.muted:hover{color:#fff; border-color:#00aaff; box-shadow:0 6px 20px rgba(0,170,255,0.4);}
+
+footer{margin-top:20px; font-size:12px; color:#98a9bd;}
+@media(max-width:400px){ .container{padding:20px;} }
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="avatar"></div>
+  <h1>XEE <span class="check">✔️</span></h1>
+  <p class="desc">Pilih salah satu link di bawah ini:</p>
+
+  <a class="btn" href="https://wa.me/6282137840556?text=Halo%20aku%20dari%20website%20kamu" target="_blank">
+    <div class="left"><span class="emoji">💬</span> Chat WhatsApp</div>
+    <span class="badge">Official</span>
+  </a>
+
+  <a class="btn" href="https://deltaios-executor.com" target="_blank">
+    <div class="left"><span class="emoji">🍎</span> Download Delta iOS</div>
+    <span class="badge">Official</span>
+  </a>
+
+  <a class="btn" href="https://delta-executor.com/download/#goog_rewarded" target="_blank">
+    <div class="left"><span class="emoji">🤖</span> Download Delta Android</div>
+    <span class="badge">Official</span>
+  </a>
+
+  <a class="btn" href="https://krnl-ios.com" target="_blank">
+    <div class="left"><span class="emoji">🍎</span> KRNL iOS</div>
+    <span class="badge">Official</span>
+  </a>
+
+  <a class="btn" href="https://workink.net/23TX/njjwh4lo" target="_blank">
+    <div class="left"><span class="emoji">🤖</span> KRNL Android</div>
+    <span class="badge">Official</span>
+  </a>
+
+  <!-- Tombol Script -->
+  <a class="btn" href="scripts/speedxhublua.html" target="_blank">
+    <div class="left"><span class="emoji">📄</span> SCRIPT SPEEDXHUB[GAG]</div>
+    <span class="badge">Official</span>
+  </a>
+
+  <a class="btn" href="scripts/fly.html" target="_blank">
+    <div class="left"><span class="emoji">📄</span> SCRIPT FLY</div>
+    <span class="badge">Official</span>
+  </a>
+
+  <a class="btn" href="scripts/voidware.html" target="_blank">
+    <div class="left"><span class="emoji">📄</span> SCRIPT VOIDWARE[99NIGHT]</div>
+    <span class="badge">Official</span>
+  </a>
+
+  <footer>Made with ❤️ by Fikri (XEE)</footer>
+</div>
+</body>
+</html>
